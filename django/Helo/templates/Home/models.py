@@ -1,0 +1,14 @@
+from django.db import models
+
+#make migraton - create change nd store it
+#  #apply pending changes in created by make migration
+
+class Contact(models.Model):
+    name = models.CharField(max_length=122)
+    email = models.CharField(max_length=122)
+    phone = models.CharField(max_length=12) 
+    desc = models.TextField()
+    date =  models.DateTimeField()
+
+    def __str__(self):
+        return self.name
